@@ -74,7 +74,7 @@ export function Footer() {
         </div>
         
         <div className="mt-8 pt-8 border-t border-border text-center text-muted-foreground text-sm">
-          <p>© 2024 bupy. Open source software released under the MIT License.</p>
+          <p>© 2025 bupy. Open source software released under the MIT License.</p>
         </div>
       </div>
     </footer>
