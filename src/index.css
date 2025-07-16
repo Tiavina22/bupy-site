@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system for bupy - Modern developer tool aesthetic */
+
+@layer base {
+  :root {
+    /* Core palette - tech-focused blues and teals */
+    --background: 0 0% 100%;
+    --foreground: 222 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 4.9%;
+
+    /* Primary - deep tech blue */
+    --primary: 210 100% 12%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 210 100% 20%;
+
+    /* Secondary - light blue accent */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 210 100% 12%;
+
+    /* Muted tones */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent - success green for CLI/terminal feel */
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 98%;
+    --accent-glow: 142 76% 45%;
+
+    /* Terminal colors */
+    --terminal-bg: 220 13% 18%;
+    --terminal-text: 142 76% 65%;
+    --terminal-prompt: 42 100% 50%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* UI elements */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 100% 12%;
+
+    /* Design tokens */
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 12%), hsl(210 100% 20%));
+    --gradient-accent: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 12%) 0%, hsl(210 100% 20%) 50%, hsl(142 76% 36%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    
+    /* Shadows */
+    --shadow-card: 0 4px 6px -1px hsl(210 100% 12% / 0.05), 0 2px 4px -1px hsl(210 100% 12% / 0.03);
+    --shadow-elevated: 0 10px 25px -5px hsl(210 100% 12% / 0.1), 0 10px 10px -5px hsl(210 100% 12% / 0.04);
+    --shadow-glow: 0 0 40px hsl(210 100% 20% / 0.15);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme - deep backgrounds with bright accents */
+    --background: 220 13% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 13% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 13% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Primary - bright accent in dark mode */
+    --primary: 210 100% 65%;
+    --primary-foreground: 220 13% 8%;
+    --primary-glow: 210 100% 75%;
+
+    /* Secondary */
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    /* Muted */
+    --muted: 220 13% 15%;
+    --muted-foreground: 215 16% 65%;
+
+    /* Accent - bright green */
+    --accent: 142 76% 50%;
+    --accent-foreground: 220 13% 8%;
+    --accent-glow: 142 76% 60%;
+
+    /* Terminal colors remain the same */
+    --terminal-bg: 220 13% 12%;
+    --terminal-text: 142 76% 70%;
+    --terminal-prompt: 42 100% 60%;
+
+    /* Destructive */
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 220 13% 8%;
+
+    /* UI elements */
+    --border: 220 13% 20%;
+    --input: 220 13% 15%;
+    --ring: 210 100% 65%;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 65%), hsl(210 100% 75%));
+    --gradient-accent: linear-gradient(135deg, hsl(142 76% 50%), hsl(142 76% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 13% 8%) 0%, hsl(210 100% 15%) 50%, hsl(142 76% 20%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 13% 10%), hsl(220 13% 12%));
+    
+    /* Dark shadows */
+    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.2), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-elevated: 0 10px 25px -5px hsl(0 0% 0% / 0.3), 0 10px 10px -5px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 40px hsl(210 100% 65% / 0.2);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+  
+  .animate-bounce-in {
+    animation: bounceIn 0.8s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
