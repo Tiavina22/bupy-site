@@ -71,7 +71,7 @@ export function DynamicTerminal({ className = "" }: TerminalProps) {
         <div className="text-terminal-text text-sm font-mono">bupy@terminal</div>
       </div>
       
-      <div className="p-6 h-80 overflow-hidden">
+      <div className="p-6 h-[32rem] overflow-hidden">
         <div className="font-mono text-sm space-y-1">
           {commands.slice(0, visibleCommands).map((command, index) => (
             <div key={index} className="flex items-start">
