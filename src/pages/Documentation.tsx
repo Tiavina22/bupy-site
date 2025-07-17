@@ -57,16 +57,16 @@ npm install`;
             
             <div className="flex items-center justify-center space-x-4 text-sm text-muted-foreground">
               <span className="flex items-center space-x-1">
-                <span>⭐</span>
+                <span>3</span>
                 <span>GitHub stars</span>
               </span>
               <span className="flex items-center space-x-1">
-                <span>📄</span>
-                <span>MIT License</span>
+                <span>2</span>
+                <span>Fork</span>
               </span>
               <span className="flex items-center space-x-1">
-                <span>🔄</span>
-                <span>Last update</span>
+                <span></span>
+                <span>Open Source</span>
               </span>
             </div>
             
